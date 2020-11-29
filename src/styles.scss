@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: quakiez;
+    src: url(assets/fonts/quakiez-display.ttf) format("opentype");
+  }
+
+.btn-primary {
+    color: #fff;
+    background-color: #6f50a0;
+    border-color: #6f50a0;
+}
+.bg-primary {
+    background-color: #41246f!important;
+}
+.btn{
+    padding: 11px 40px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color:#41246f;
+    border: none;
+}
+.hr-border {
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #fff;
+    text-align: left;
+}
+
+.font-opensans{
+    font-family: Open Sans;
+}
+.font-quakiez{
+    font-family: quakiez;
+}
+.header-dispaly-1{
+    font-size:5vw;
+}
+
+.readmore{
+    color:#5de6a7;
+    font-family: Open Sans;
+    font-weight: bold;
+        font-size: 12px;
+}
+
+.size-font-1{
+     width: 37px!important;
+}
+
+.arrow {
+  
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.mt-7{
+  margin-top: 7rem!important;
+}
+.bg-primary-one{
+    background-color:#f1f5f9;
+}
+
+.text-home{
+  color: #000000;
+}
+.text-color-primary{
+  color: #41246f !important;
+}
+
+.font-poppins{
+  font-family: Poppins;
+}
+.head-color{
+  color: #5de6a7;
+  font-weight: 500;
+    font-size: 23px;
+}
+.bg-black{
+  background-color: #000000;
+}
+.price-head{
+  font-size: 30px;
+}
+.font-15{
+  font-size: 15px;
+}
+.card-body-p{
+    padding: 72px 1.25rem;
+}
+.price-bordered{
+  border:5px solid #5de6a7;
+}
+.bg-pink{
+  background-color: #edb3c1;
+}
+.bg-gray{
+  background-color: #f8f8f8;
+}
+.bg-darkgray{
+  background-color: #b9b9b9;
+}
+.jumbotron{
+  background-color: none !important;
+}
+.copyright{
+      font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.logozindex{
+  position: absolute;
+    overflow: hidden;
+    z-index: 9;
+    width: 92px;
+    top: 30px;
+}
+
