@@ -1,0 +1,29 @@
+<svg id="box" xmlns="http://www.w3.org/2000/svg" width="33.137" height="41.17" viewBox="0 0 33.137 41.17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_4" data-name="Group 4" transform="translate(0 11.046)">
+    <g id="Group_3" data-name="Group 3">
+      <path id="Path_5" data-name="Path 5" class="cls-1" d="M81.582,137.366H51.457a1.506,1.506,0,0,0-1.506,1.506v27.112a1.506,1.506,0,0,0,1.506,1.506H81.582a1.506,1.506,0,0,0,1.506-1.506V138.872A1.506,1.506,0,0,0,81.582,137.366Zm-1.506,27.112H52.964v-24.1H80.076v24.1Z" transform="translate(-49.951 -137.366)"/>
+    </g>
+  </g>
+  <g id="Group_6" data-name="Group 6" transform="translate(9.389 17.924)">
+    <g id="Group_5" data-name="Group 5">
+      <path id="Path_6" data-name="Path 6" class="cls-1" d="M179.565,222.907a1.506,1.506,0,0,0-1.506,1.506v2.31h-8.334v-2.31a1.506,1.506,0,1,0-3.012,0v2.31a2.981,2.981,0,0,0,3.012,3.012h8.334a2.981,2.981,0,0,0,3.012-3.012v-2.31A1.506,1.506,0,0,0,179.565,222.907Z" transform="translate(-166.712 -222.907)"/>
+    </g>
+  </g>
+  <g id="Group_8" data-name="Group 8" transform="translate(2.51 5.523)">
+    <g id="Group_7" data-name="Group 7">
+      <path id="Path_7" data-name="Path 7" class="cls-1" d="M107.78,68.683h-25.1a1.506,1.506,0,0,0,0,3.013h25.1a1.506,1.506,0,0,0,0-3.013Z" transform="translate(-81.17 -68.683)"/>
+    </g>
+  </g>
+  <g id="Group_10" data-name="Group 10" transform="translate(5.021)">
+    <g id="Group_9" data-name="Group 9">
+      <path id="Path_8" data-name="Path 8" class="cls-1" d="M133.979,0H113.9a1.506,1.506,0,0,0,0,3.013h20.083a1.506,1.506,0,1,0,0-3.013Z" transform="translate(-112.39)"/>
+    </g>
+  </g>
+</svg>
