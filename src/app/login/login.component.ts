@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, public dialog: MatDialog, public dialogRef: MatDialogRef<LoginComponent>) { }
+  constructor(private formBuilder: FormBuilder, private service: AppService,
+    public dialog: MatDialog, public dialogRef: MatDialogRef<LoginComponent>) { }
 
   ngOnInit(): void {
     this.loginForm= this.formBuilder.group({
@@ -19,7 +21,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.loginForm.value)
+    this.service.login(this.loginForm.value).subscribe((resp) => {
+      console.log(resp);
+    })
   }
 
 }
