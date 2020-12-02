@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-
+@import '~@angular/cdk/overlay-prebuilt.css';
 /*
 *inside dashboard
 */
@@ -3856,5 +3856,9 @@ table.focus-on tbody tr.focused td {
 }
 .rounded-card{
   border-radius: 10;
+}
+
+.my-full-screen-dialog {
+  background-color: #ffffff;
 }
 
