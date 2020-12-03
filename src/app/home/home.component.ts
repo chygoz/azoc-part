@@ -15,8 +15,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginDialog(){
+  loginDialog() {
     let dialogRef = this.dialog.open(LoginComponent,
+      { panelClass: 'my-full-screen-dialog', width: '600px', });
+
+    dialogRef.afterClosed().subscribe(() => {
+    })
+  }
+  registerDialog() {
+    let dialogRef = this.dialog.open(SignupComponent,
       { panelClass: 'my-full-screen-dialog', width: '600px', });
 
     dialogRef.afterClosed().subscribe(() => {

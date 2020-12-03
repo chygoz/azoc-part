@@ -1,1 +1,28 @@
-<p>signup works!</p>
+<form [formGroup]="signForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">First Name</label>
+      <input type="text" class="form-control" 
+      id="inputEmail4" placeholder="First Name" formControlName="fistname">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Last Name</label>
+      <input type="text" class="form-control" id="inputPassword4" 
+      placeholder="Last Name" formControlName="lastname">
+    </div>
+</div>
+<div class="form-group">
+      <label for="email">Clity</label>
+      <input type="text" class="form-control" placeholder="Enter City" formControlName="city">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

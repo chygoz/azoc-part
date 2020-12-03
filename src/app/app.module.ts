@@ -46,7 +46,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule
   ],
   exports: [MatDialogModule],
-  entryComponents: [LoginComponent],
+  entryComponents: [LoginComponent, SignupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
