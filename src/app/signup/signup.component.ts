@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { AppService } from '../app.service';
 export class SignupComponent implements OnInit {
   signForm: FormGroup;
   ErrText;
-  constructor(private formBuilder: FormBuilder, private service: AppService,
+  constructor(private formBuilder: FormBuilder, private service: AppService,private router: Router,
     public dialog: MatDialog, public dialogRef: MatDialogRef<SignupComponent>) { }
 
   ngOnInit(): void {
@@ -28,7 +29,8 @@ export class SignupComponent implements OnInit {
     this.service.register(this.signForm.value).subscribe((resp) => {
       if(resp.status){
         localStorage.setItem('token', resp.token);
-
+        this.router.navigate(['/dashboard']);
+        this.dialogRef.close();
       }else {
         this.ErrText = resp.msg;
       }
