@@ -10,6 +10,7 @@ import { AppService } from '../app.service';
 })
 export class SignupComponent implements OnInit {
   signForm: FormGroup;
+  ErrText;
   constructor(private formBuilder: FormBuilder, private service: AppService,
     public dialog: MatDialog, public dialogRef: MatDialogRef<SignupComponent>) { }
 
@@ -24,9 +25,13 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.signForm.value);
     this.service.register(this.signForm.value).subscribe((resp) => {
-      console.log(resp);
+      if(resp.status){
+        localStorage.setItem('token', resp.token);
+
+      }else {
+        this.ErrText = resp.msg;
+      }
     })
   }
 
