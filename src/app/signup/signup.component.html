@@ -1,30 +1,54 @@
-<form [formGroup]="signForm" (ngSubmit)="onSubmit()">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">First Name</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="First Name" formControlName="firstname">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Last Name</label>
-      <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name" formControlName="lastname">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="email">Clity</label>
-    <input type="text" class="form-control" placeholder="Enter City" formControlName="city">
-  </div>
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
-  </div>
-  <div class="form-group text-center red">
-    {{ErrText}} 
-  </div>
-  <div class="text-center">
-    <button type="submit" [disabled]="!signForm.valid" class="btn btn-primary">Submit</button>
-  </div>
-</form>
+
+<!-- Main -->
+<div class="d-md-flex h-md-100 align-items-center">
+	<div class="col-md-6 p-0 bg-indigo h-md-100">
+        <div class="text-white d-md-flex
+         align-items-center h-100 p-5 text-center justify-content-center">
+			<div class="logoarea pt-5 pb-5">
+				 
+				<h1 class="mb-0 mt-3 display-4"> 
+                    <img src="./assets/images/logo.png"
+                     class="img-fluid" />
+                    </h1>
+				<h5 class="mb-4 font-weight-light">
+                  COZA GLOBAL PARTNER
+                    <i class="fab fa-sass fa-2x text-cyan"></i>
+                </h5>
+            </div>
+		</div>
+	</div>
+	<div class="col-md-6 p-0 bg-white h-md-100 loginarea" style="overflow-y: scroll;">
+		<div class="align-items-center pl-5 pr-5 pt-4 justify-content-center">
+			<form >
+				<h4 class="mb-4 text-center">COZA PARTNER REGISTRATION FORM</h4>
+				<div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label for="inputEmail4">First Name</label>
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="First Name" formControlName="fistname">
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label for="inputPassword4">Last Name</label>
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name" formControlName="lastname">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="email">Clity</label>
+                    <input type="text" class="form-control" placeholder="Enter City" formControlName="city">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
+                </div>
+                 <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+                </div>
+				
+				<button type="submit" class="btn btn-primary btn-lg btn-block mr-3 small">Sign Up</button>
+				<small class="d-block mt-4 text-center"><a class="text-gray" href="#">Forgot your password?</a></small>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- End Main -->
+    

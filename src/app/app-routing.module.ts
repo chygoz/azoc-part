@@ -8,15 +8,10 @@ import { ResourcesComponent } from './resources/resources.component';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SignupComponent } from './signup/signup.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {
-    path: '', component: LayoutComponent,
-    children: [
-      { path: '', component: DashboardComponent }
-    ],
-    //canActivate: [AuthGuardService]
-  },
+  { path: 'signup', component: SignupComponent },
   {
     path: 'dashboard', component: LayoutComponent,
     children: [
