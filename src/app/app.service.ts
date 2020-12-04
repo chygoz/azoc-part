@@ -23,4 +23,11 @@ export class AppService {
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(`${api.api_url}register`, data, { headers });
   }
+  
+  getSubscriptions(data): Observable<any> {
+    let headers = new HttpHeaders();
+    headers = headers.append('Accept', 'application/json');
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(`${api.api_url}getSubscriptions`, data, { headers });
+  }
 }
