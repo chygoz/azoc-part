@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signForm = this.formBuilder.group({
-      fistname: ['', [Validators.required]],
+      firstname: ['', [Validators.required]],
       lastname: ['', [Validators.required]],
       city: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -29,6 +29,7 @@ export class SignupComponent implements OnInit {
     this.service.register(this.signForm.value).subscribe((resp) => {
       if(resp.status){
         localStorage.setItem('token', resp.token);
+        localStorage.setItem('userData', JSON.stringify(resp.data));
         this.router.navigate(['/dashboard']);
         this.dialogRef.close();
       }else {
