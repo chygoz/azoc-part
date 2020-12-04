@@ -215,7 +215,7 @@ b, strong {
 }
 
 .text-primary {
-  color: #30419b !important;
+  color: #41246f !important;
 }
 
 .text-warning {
@@ -3836,6 +3836,9 @@ table.focus-on tbody tr.focused td {
 .opacity5{
   opacity:0.5;
 }
+.opacity6{
+  opacity:0.6;
+}
 .opacity8{
   opacity:0.8;
 }
@@ -3867,7 +3870,7 @@ table.focus-on tbody tr.focused td {
    
 }
 .rounded-card{
-  border-radius: 10;
+  border-radius: 9px;
 }
 
 .my-full-screen-dialog {
@@ -4082,7 +4085,14 @@ label{
 .weight-100{
   font-weight: 100;
 }
+.weight-500{
+  font-weight: 500;
+}
 .login-title{
   color:#6f50a0;
       font-size: 17px;
+}
+
+.bg-default{
+  background-color: #f1f5f9;
 }
