@@ -1,54 +1,66 @@
 
 <!-- Main -->
 <div class="d-md-flex h-md-100 align-items-center">
-	<div class="col-md-6 p-0 bg-indigo h-md-100">
+	<div class="col-md-5 p-0 bg-indigo h-md-100">
         <div class="text-white d-md-flex
          align-items-center h-100 p-5 text-center justify-content-center">
 			<div class="logoarea pt-5 pb-5">
 				 
 				<h1 class="mb-0 mt-3 display-4"> 
                     <img src="./assets/images/logo.png"
-                     class="img-fluid" />
+                     class="img-fluid" width="150" />
                     </h1>
-				<h5 class="mb-4 font-weight-light">
+				<h5 class="mb-4 pt-5 font-weight-light">
                   COZA GLOBAL PARTNER
                     <i class="fab fa-sass fa-2x text-cyan"></i>
                 </h5>
             </div>
 		</div>
 	</div>
-	<div class="col-md-6 p-0 bg-white h-md-100 loginarea" style="overflow-y: scroll;">
+	<div class="col-md-7 pl-5 pr-5 bg-white h-md-100 loginarea" style="overflow-y: scroll;">
 		<div class="align-items-center pl-5 pr-5 pt-4 justify-content-center">
 			<form [formGroup]="signForm" (ngSubmit)="onSubmit()">
-				<h4 class="mb-4 text-center">COZA PARTNER REGISTRATION FORM</h4>
+                <h4 class="mb-4 text-left pl-4 pt-4 pb-2 font-18">COZA PARTNER REGISTRATION FORM</h4>
+                <p class="font-14 pl-4 pb-4">Please fill form correctly with your details. Note that your <br />
+                    information is treated with utmost confidentiality</p>
 				<div class="form-row">
                     <div class="form-group col-md-6">
-                    <label for="inputEmail4">First Name</label>
+                    <label for="inputEmail4" class="font-500 font-12 text-primary">First Name</label>
                     <input type="text" class="form-control" id="inputEmail4" placeholder="First Name" formControlName="firstname">
                     </div>
                     <div class="form-group col-md-6">
-                    <label for="inputPassword4">Last Name</label>
+                    <label for="inputPassword4" class="font-500 font-12 text-primary">Last Name</label>
                     <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name" formControlName="lastname">
                     </div>
                 </div>
 				<div class="form-group">
-                    <label for="email">Email address</label>
+                    <label for="email" class="font-500 font-12 text-primary">Email address</label>
                     <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
+                    <p class="pt-3">
+                        we will communicate with you using this email. Please select an email you regularly monitor. Thank you
+                    </p>
                 </div>
                  <div class="form-group">
-                    <label for="pwd">Password</label>
+                    <label for="pwd" class="font-500 font-12 text-primary">Password</label>
                     <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
                 </div>
                  <div class="form-group">
-                    <label for="pwd">Confirm Password</label>
+                    <label for="pwd" class="font-500 font-12 text-primary">Confirm Password</label>
                     <input type="password" class="form-control" 
                     placeholder="Enter password" formControlName="confirmPassword">
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label pb-4 font-500 font-12 text-primary" for="exampleCheck1">
+                        I have read and agree with <span class="weight-bold">Terms & Conditions</span>
+                    </label>
                 </div>
                 <div class="text-danger text-center">
                     {{ErrText}}
                 </div>
-				<button type="submit" class="btn btn-primary btn-lg btn-block mr-3 small">Sign Up</button>
-				<small class="d-block mt-4 text-center"><a class="text-gray" href="#">Forgot your password?</a></small>
+				<button type="submit" class="btn btn-primary btn-lg btn-block mr-3 small mb-5">Sign Up</button>
+                
 			</form>
 		</div>
 	</div>

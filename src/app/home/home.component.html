@@ -71,17 +71,26 @@
                 <div class="container">
 
                     <div class="card-deck mb-3 text-center">
+                        
                         <div class="card mb-4 shadow-sm bg-black rounded-9">
-                            <div class="card-body card-body-p">
-                                <h1 class="card-title pricing-card-title font-quakiez text-white price-head">CLASSIC</h1>
-                                <ul class="list-unstyled mt-3 mb-4 font-poppins text-white font-15">
+                            <div class="card-body  card-body-p" 
+                            (click)="packageSelect($event,'classic')" 
+                            [ngClass]="{
+                            'price-bordered':subscriptionplan === 'classic'}">
+                                <h1 class="card-title pricing-card-title font-quakiez text-white 
+                                    price-head">CLASSIC</h1>
+                                <ul class="list-unstyled mt-3 mb-4 font-poppins 
+                                    text-white font-15 opacity6">
                                     <li>$99 OR LESS</li>
                                     <li>N34,999 OR LESS</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="card mb-4 shadow-sm bg-pink rounded-9">
-                            <div class="card-body price-bordered card-body-p">
+                            <div class="card-body  card-body-p" 
+                            (click)="packageSelect($event,'pearl')" 
+                            [ngClass]="{
+                            'price-bordered':subscriptionplan === 'pearl'}">
                                 <h1 class="card-title pricing-card-title font-quakiez text-white 
                                     price-head text-color-primary">PEARL</h1>
                                 <ul class="list-unstyled mt-3 mb-4 font-poppins 
@@ -92,10 +101,14 @@
                             </div>
                         </div>
                         <div class="card mb-4 shadow-sm bg-gray rounded-9 button-platinum">
-                            <div class="card-body card-body-p">
+                            <div class="card-body card-body-p" 
+                            (click)="packageSelect($event,'platinum')"
+                            [ngClass]="{
+                                'price-bordered':subscriptionplan === 'platinum'}">
                                 <h1 class="card-title pricing-card-title font-quakiez 
                                     text-white price-head text-color-primary">PLATINUM</h1>
-                                <ul class="list-unstyled mt-3 mb-4 font-poppins text-white font-15 text-color-primary">
+                                <ul class="list-unstyled mt-3 mb-4 font-poppins text-white
+                                 font-15 text-color-primary">
                                     <li>$500 - $999</li>
                                     <li>N175,000 - N349,999</li>
                                 </ul>
@@ -103,7 +116,10 @@
                         </div>
                         <div class="card mb-4 shadow-sm bg-darkgray rounded-9
                         button button-silver">
-                            <div class="card-body card-body-p">
+                            <div class="card-body card-body-p" 
+                            (click)="packageSelect($event,'diamond')"
+                             [ngClass]="{
+                            'price-bordered':subscriptionplan === 'diamond'}">
                                 <h1 class="card-title pricing-card-title font-quakiez 
                                     text-white price-head text-color-primary">DIAMOND</h1>
                                 <ul class="list-unstyled mt-3 mb-4 font-poppins text-white font-15 text-color-primary">

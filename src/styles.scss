@@ -934,7 +934,7 @@ dt {
 
 .app-search .form-control,
 .app-search .form-control:focus {
-  border: 1px solid #f0f4f7;
+  border: 2px solid #41246f;
   font-size: 13px;
   height: 34px;
   padding-left: 18px;
@@ -1442,8 +1442,8 @@ dt {
 
 .left-side-menu-light .navbar-custom .notification-list .app-search .form-control,
 .left-side-menu-light .navbar-custom .notification-list .app-search .form-control:focus {
-  border: 1px solid #42464b;
-  background: #42464b;
+  border: 1px solid #41246f;
+  background: #41246f;
   color: #ced4da;
 }
 
@@ -2066,23 +2066,24 @@ label {
 
 .form-control {
   font-size: 13px;
-      border: 2px solid #cbd3dd;
+      border: 2px solid #41246f;
           border-radius: 6.2px;
-              height: 41px;
+              height: 47px;
    
 }
 form-control::placeholder {
   color: #ac0d64;
+  
 }
 
 .form-control:focus {
-  border-color: #30419b;
+  border-color: #41246f;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .custom-control-input:checked ~ .custom-control-indicator {
-  background-color: #30419b;
+  background-color: #41246f;
 }
 
 .custom-control-input:focus ~ .custom-control-indicator {
@@ -4059,7 +4060,7 @@ label{
 }
 
 .list-unstyled li{
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .btn-light:hover, .btn-light{
@@ -4068,6 +4069,11 @@ label{
 
 @media (min-width: 768px) {
   .h-md-100 {height: 100vh;}
+}
+@media (max-width: 767px) {
+ .hideleftpan{
+   display: none;
+ }
 }
 .btn-round { border-radius: 30px;}
 .bg-indigo {background: #41246f;}
@@ -4088,11 +4094,28 @@ label{
 .weight-500{
   font-weight: 500;
 }
+.weight-bold{
+  font-weight: bold;
+}
 .login-title{
   color:#6f50a0;
-      font-size: 17px;
+      font-size: 14px;
 }
 
 .bg-default{
   background-color: #f1f5f9;
 }
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #bfbfbf;
+            opacity: 0.8; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: bfbfbf;
+            opacity: 0.8;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+            color: bfbfbf;
+            opacity: 0.8;
+ }

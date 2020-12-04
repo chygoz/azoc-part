@@ -9,7 +9,7 @@ import { SignupComponent } from '../signup/signup.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  subscriptionplan = "pearl";
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -28,6 +28,11 @@ export class HomeComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(() => {
     })
+  }
+
+  packageSelect(event, item) {
+    this.subscriptionplan = item;
+    console.log(item);
   }
 
 
