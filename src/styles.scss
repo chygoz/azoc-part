@@ -4,6 +4,10 @@
 /*
 *inside dashboard
 */
+@font-face {
+    font-family: Quakiez;
+    src: url(assets/fonts/Quakiez.ttf) format("opentype");
+  }
 
 body {
   background-repeat: repeat;
@@ -775,7 +779,7 @@ dt {
   text-align: center;
   height: 70px;
   position: relative;
-  width: 240px;
+  width: 260px;
   z-index: 1;
 }
 
@@ -969,7 +973,7 @@ dt {
 
 /******* Sidemenu *******/
 .side-menu {
-  width: 240px;
+  width: 260px;
   z-index: 10;
   background: #41246f;
   bottom: 0;
@@ -1006,6 +1010,7 @@ dt {
 #sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a:focus, #sidebar-menu > ul > li > a:active {
   color: #ffffff;
   text-decoration: none;
+
 }
 
 #sidebar-menu > ul > li > a > span {
@@ -1027,6 +1032,7 @@ dt {
      color: #ffffff !important;
     background-color: #6f50a0;
     margin: 0px 17px;
+    padding: 16px 37px;
 }
 
 #sidebar-menu .menu-title {
@@ -1321,6 +1327,7 @@ dt {
 /******* Page Title *******/
 .page-title-box {
   padding: 20px 0px;
+  padding-top: 36px;
 }
 
 .page-title-box .page-title {
@@ -1623,8 +1630,8 @@ button:focus {
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle,
 .btn-outline-primary:not([disabled]):not(.disabled).active, .btn-outline-primary:not([disabled]):not(.disabled):active,
 .show > .btn-outline-primary.dropdown-toggle {
-  background-color: #2a3988;
-  border: 1px solid #2a3988;
+  background-color: #4B2A80;
+  border: 1px solid #4B2A80;
 }
 
 .btn-primary.focus, .btn-primary:focus, .btn-outline-primary.focus, .btn-outline-primary:focus,
@@ -1666,8 +1673,8 @@ button:focus {
 }
 
 .btn-info {
-  background-color: #59c6fb;
-  border: 1px solid #59c6fb;
+  background-color: #5de6a7;
+  border: 1px solid #5de6a7;
 }
 
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.focus,
@@ -1676,8 +1683,8 @@ button:focus {
 .show > .btn-outline-info.dropdown-toggle, .btn-outline-info:hover, .btn-info.active, .btn-info:active,
 .show > .btn-info.dropdown-toggle, .btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show > .btn-info.dropdown-toggle,
 .btn-outline-info:not([disabled]):not(.disabled).active, .btn-outline-info:not([disabled]):not(.disabled):active, .show > .btn-outline-info.dropdown-toggle {
-  background-color: #40bdfa;
-  border: 1px solid #40bdfa;
+  background-color: #5de6a7;
+  border: 1px solid #5de6a7;
 }
 
 .btn-info.focus, .btn-info:focus, .btn-outline-info.focus, .btn-outline-info:focus,
@@ -3649,7 +3656,7 @@ table.focus-on tbody tr.focused td {
 
 @font-face {
     font-family: quakiez;
-    src: url(assets/fonts/quakiez-display.ttf) format("opentype");
+    src: url(assets/fonts/Quakiez.ttf) format("opentype");
   }
 
 .btn-primary {
@@ -3661,8 +3668,8 @@ table.focus-on tbody tr.focused td {
     background-color: #41246f!important;
 }
 .btn{
-    padding: 11px 40px;
-    font-size: 11px;
+  padding: 11px 34px;
+    font-size: 10px;
    
 }
 
@@ -3684,7 +3691,7 @@ table.focus-on tbody tr.focused td {
     font-family: Open Sans;
 }
 .font-quakiez{
-    font-family: quakiez;
+    font-family: Quakiez;
 }
 .header-dispaly-1{
     font-size:5vw;
@@ -3700,7 +3707,7 @@ table.focus-on tbody tr.focused td {
     color:#5de6a7;
     font-family: Open Sans;
     font-weight: bold;
-        font-size: 12px;
+        font-size: 14px;
 }
 
 .size-font-1{
@@ -3732,6 +3739,9 @@ table.focus-on tbody tr.focused td {
 .mt-7{
   margin-top: 7rem!important;
 }
+.mt-9{
+  margin-top: 9rem!important;
+}
 .bg-primary-one{
     background-color:#f1f5f9;
 }
@@ -3747,9 +3757,10 @@ table.focus-on tbody tr.focused td {
   font-family: Poppins;
 }
 .head-color{
-  color: #5de6a7;
-  font-weight: 500;
-    font-size: 23px;
+ color: #5de6a7;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 15px;
 }
 .bg-black{
   background-color: #000000;
@@ -3762,6 +3773,7 @@ table.focus-on tbody tr.focused td {
 }
 .card-body-p{
     padding: 72px 1.25rem;
+    border-radius: 10px;
 }
 .price-bordered{
   border:5px solid #5de6a7;
@@ -3788,7 +3800,7 @@ table.focus-on tbody tr.focused td {
     overflow: hidden;
     z-index: 9;
     width: 92px;
-    top: 30px;
+    top: 45px;
 }
 
 .imgaligndashboard{
@@ -3834,7 +3846,7 @@ table.focus-on tbody tr.focused td {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+        margin-bottom: 1.82rem;
 }
 .btn-block+.btn-block {
     margin-top: 1rem;
@@ -3851,8 +3863,8 @@ table.focus-on tbody tr.focused td {
 
 .card-text{
       color: #fff;
-    opacity: 0.5;
-    line-height: 0;
+   
+   
 }
 .rounded-card{
   border-radius: 10;
@@ -3862,6 +3874,189 @@ table.focus-on tbody tr.focused td {
   background-color: #ffffff;
 }
 
-.red {
-  color: red;
+.becomea{
+  font-size: 24px;
+    font-weight: 400;
+    opacity: 0.7;
+
+}
+.rounded-9{
+  border-radius: 9px;
+}
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+      padding-left: 55px;
+}
+
+label{
+      margin-bottom: 0.9rem;
+}
+
+.btn {
+    padding: 14px 34px;
+    font-size: 10px;
+}
+
+
+.button-silver {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #ffffff;
+  box-shadow:
+    2px 2px 0.5em rgba(122, 122, 122, 0.55),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.9),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.34)
+  ;
+  border: 1px solid #dedede;
+  background:
+    -moz-linear-gradient(
+    -72deg,
+    #dedede,
+    #ffffff 16%,
+    #dedede 21%,
+    #ffffff 24%,
+    
+    #dedede 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedede 72%,
+    #ffffff 80%,
+    #dedede 84%,
+    
+  );
+  background:
+  -webkit-linear-gradient(
+    -72deg,
+    #dedede,
+    #ffffff 16%,
+    #dedede 21%,
+    #ffffff 24%,
+  
+    #dedede 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedede 72%,
+    #ffffff 80%,
+    #dedede 84%,
+
+  );
+  background:
+  -o-linear-gradient(
+    -72deg,
+    #dedede,
+    #ffffff 16%,
+    #dedede 21%,
+    #ffffff 24%,
+
+    #dedede 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedede 72%,
+    #ffffff 80%,
+    #dedede 84%,
+ 
+  );
+  background:
+  linear-gradient(
+    -72deg,
+    #dedede,
+    #ffffff 16%,
+    #dedede 21%,
+    #ffffff 24%,
+ 
+    #dedede 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedede 72%,
+    #ffffff 80%,
+    #dedede 84%,
+   
+  );
+}
+
+
+.button-platinum {
+  color: rgba(0, 0, 0, 0.72);
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #ffffff;
+  box-shadow:
+    2px 2px 0.5em rgba(122, 122, 122, 0.55),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.9),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.5)
+  ;
+  border: 1px solid #cacade;
+  background:
+    -moz-linear-gradient(
+    -72deg,
+    #dedeff,
+    #ffffff 16%,
+    #dedeff 21%,
+    #ffffff 24%,
+    
+    #dedeff 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedeff 72%,
+    #ffffff 80%,
+    #dedeff 84%,
+    
+  );
+  background:
+  -webkit-linear-gradient(
+    -72deg,
+    #dedeff,
+    #ffffff 16%,
+    #dedeff 21%,
+    #ffffff 24%,
+    
+    #dedeff 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedeff 72%,
+    #ffffff 80%,
+    #dedeff 84%,
+    
+  );
+  background:
+  -o-linear-gradient(
+    -72deg,
+    #dedeff,
+    #ffffff 16%,
+    #dedeff 21%,
+    #ffffff 24%,
+    
+    #dedeff 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedeff 72%,
+    #ffffff 80%,
+    #dedeff 84%,
+   
+  );
+  background:
+  linear-gradient(
+    -72deg,
+    #dedeff,
+    #ffffff 16%,
+    #dedeff 21%,
+    #ffffff 24%,
+    
+    #dedeff 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedeff 72%,
+    #ffffff 80%,
+    #dedeff 84%,
+   
+  );
+}
+
+.list-unstyled li{
+  font-weight: 500;
+}
+
+.btn-light:hover, .btn-light{
+  border-color: none !important;
 }
