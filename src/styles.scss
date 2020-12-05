@@ -1883,6 +1883,7 @@ button:focus {
     -webkit-column-gap: 30px;
     column-gap: 30px;
   }
+ 
 }
 
 .card-columns .card {
@@ -2066,7 +2067,7 @@ label {
 
 .form-control {
   font-size: 13px;
-      border: 2px solid #41246f;
+      border: 1px solid #41246f;
           border-radius: 6.2px;
               height: 47px;
    
@@ -3682,7 +3683,8 @@ table.focus-on tbody tr.focused td {
 }
 .hr-border {
     display: block;
-    width: 80px;
+    width: 45px;
+    border-radius: 80px;
     height: 3px;
     background: #fff;
     text-align: left;
@@ -3875,16 +3877,14 @@ table.focus-on tbody tr.focused td {
 }
 
 .my-full-screen-dialog {
-  background-color: #ffffff;
+  
   border-radius: 5px;
   width: 700px !important;
 }
 
 .becomea{
-  font-size: 24px;
+  font-size: 20px;
     font-weight: 400;
-    opacity: 0.7;
-
 }
 .rounded-9{
   border-radius: 9px;
@@ -4119,3 +4119,73 @@ label{
             color: bfbfbf;
             opacity: 0.8;
  }
+ .padding-right{
+   padding-right:83px;
+ }
+
+
+ //media start
+   @media only screen and (min-width: 960px) {
+        /* styles for browsers larger than 960px; */
+        
+    }
+    @media only screen and (min-width: 1440px) {
+        /* styles for browsers larger than 1440px; */
+         
+    }
+    @media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens */
+        
+    }
+    @media only screen and (max-device-width: 480px) {
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+       
+    }
+    @media only screen and (device-width: 768px) {
+       /* default iPad screens */
+        .card-deck .card {
+    flex: 1 0 30%;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+       .mt-9{
+         margin-top: 1rem !important;
+       }
+       .becomea {
+        font-size: 19px;
+        font-weight: 400;
+        opacity: 0.7;
+        top: 23px;
+      }
+      .header-dispaly-1 {
+         font-size: 4vw;
+      }
+      .becomea {
+        font-size: 19px;
+        font-weight: 400;
+        opacity: 0.7;
+        padding-top: 26px;
+     }
+
+     .padding-right{
+        padding-right:0px;
+      }
+      .pricingalign{
+       width:50%;
+      }
+    }
+    /* different techniques for iPad screening */
+    @media only screen and (min-device-width: 481px) and 
+    (max-device-width: 1024px) and (orientation:portrait) {
+      /* For portrait layouts only */
+      
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and 
+    (orientation:landscape) {
+      /* For landscape layouts only */
+     
+    }
+
+ //media end

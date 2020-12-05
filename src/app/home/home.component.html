@@ -12,9 +12,9 @@
                 <div class="container">
                     <div class="col-12 d-flex justify-content-end align-items-center pt-5">
                         <button type="button" class="btn btn-primary mr-3 small" (click)="loginDialog()">Login</button>
-                        <a type="button" class="btn btn-light"
-                         [routerLink]="['/signup']"
-                        >Sign Up</a>
+                        <a href="#"  [routerLink]="['/signup']" 
+                        class="btn btn-light btn-lg" role="button"
+                         aria-pressed="true">Sign Up</a>
                     </div>
                     <div class="col-12 pl-5">
                         <h6 class="text-white font-opensan mt-9 becomea" >Become A</h6>
@@ -41,12 +41,12 @@
 
                         <h1 class="mt-7 text-home font-quakiez header-dispaly-1">COMMITMENT
                             SEED</h1>
-                        <p class="font-poppins" 
-                           style="color: #7b7b7b;font-size: 12px; padding-right: 83px;">
+                        <p class="font-poppins padding-right" 
+                           style="color: #7b7b7b;font-size: 12px;">
                             Through the unwavering commitment of our partners, COZA can fulfill its mandate of reaching the unchurched, spreading the love of Christ and manifesting the prosperity of His kingdom here on earth, ensuring the kingdoms of this world become the kingdom of our God and His Christ! Partnering with COZA, many have been blessed and many others have shared awesome testimonies of God’s faithfulness, abundant supply and the manifestation of undeniable and supernatural exploits in their lives. At COZA, we believe that we are all called to spread the gospel to the ends of the earth.
                         </p>
-                        <p class="font-poppins" 
-                           style="font-size: 12px;color: #7b7b7b;font-size: 13px; padding-right: 60px;text-align: justify;">
+                        <p class="font-poppins padding-right" 
+                           style="font-size: 12px;color: #7b7b7b;font-size: 12px; ">
 
                             Through the financial support of our partners, we have been able to spread the good news through unique methodology prompted by the kingdom requirements necessary to fulfill our vision.
                         </p>
@@ -72,7 +72,7 @@
 
                     <div class="card-deck mb-3 text-center">
                         
-                        <div class="card mb-4 shadow-sm bg-black rounded-9">
+                        <div class="card mb-4 shadow-sm bg-black rounded-9 pricingalign">
                             <div class="card-body  card-body-p" 
                             (click)="packageSelect($event,'classic')" 
                             [ngClass]="{
@@ -86,7 +86,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card mb-4 shadow-sm bg-pink rounded-9">
+                        <div class="card mb-4 shadow-sm bg-pink rounded-9 pricingalign">
                             <div class="card-body  card-body-p" 
                             (click)="packageSelect($event,'pearl')" 
                             [ngClass]="{
@@ -100,7 +100,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card mb-4 shadow-sm bg-gray rounded-9 button-platinum">
+                        <div class="card mb-4 shadow-sm bg-gray rounded-9 button-platinum pricingalign">
                             <div class="card-body card-body-p" 
                             (click)="packageSelect($event,'platinum')"
                             [ngClass]="{
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class="card mb-4 shadow-sm bg-darkgray rounded-9
-                        button button-silver">
+                        button button-silver pricingalign">
                             <div class="card-body card-body-p" 
                             (click)="packageSelect($event,'diamond')"
                              [ngClass]="{
