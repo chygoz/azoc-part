@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
 
 @Component({
@@ -12,11 +13,18 @@ export class SettingsComponent implements OnInit {
   amount;
   currency = 'NGN';
   email;
-  constructor(private service: AppService) {
+  subscribeForm: FormGroup
+  constructor(private formBuilder: FormBuilder, private service: AppService) {
     this.getSubscriptions();
    }
 
   ngOnInit(): void {
+    this.subscribeForm= this.formBuilder.group({
+      monthly_commitment: ['', [Validators.required]],
+      currency: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      subscription_id: ['']
+    })
   }
 
   getSubscriptions(){
@@ -34,17 +42,26 @@ export class SettingsComponent implements OnInit {
       if(subs.range_to != 'Above'){
         if((Number(this.amount) >= Number(subs.range_from)) && (Number(this.amount) <= Number(subs.range_to))){
           this.selectedPlan = subs.plan_name;
+          this.subscribeForm.controls['subscription_id'].setValue(subs._id);
           break;
         }
       }else {
         if((Number(this.amount) >= Number(subs.range_from))){
           this.selectedPlan = subs.plan_name;
+          this.subscribeForm.controls['subscription_id'].setValue(subs._id);
           break;
         }
       }
       
     }
 
+  }
+
+  onSubmit(){
+    console.log(this.subscribeForm.value);
+    this.service.registerSubscription(this.subscribeForm.value).subscribe((resp) => {
+      console.log(resp);
+    })
   }
 
 }
