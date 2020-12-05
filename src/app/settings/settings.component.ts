@@ -61,6 +61,11 @@ export class SettingsComponent implements OnInit {
     console.log(this.subscribeForm.value);
     this.service.registerSubscription(this.subscribeForm.value).subscribe((resp) => {
       console.log(resp);
+      if(resp.status){
+        this.subscribeForm.reset();
+        this.currency = 'NGN';
+        this.subscribeForm.controls['currency'].setValue('NGN');
+      }
     })
   }
 
