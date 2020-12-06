@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  userData;
   constructor() { }
   status: boolean = false;
   clickEvent() {
@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
     this.status = !this.status;
   }
   ngOnInit(): void {
-
+    this.userData = JSON.parse(localStorage.getItem('userData'))
   }
 
 }
