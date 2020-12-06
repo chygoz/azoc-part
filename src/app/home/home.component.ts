@@ -10,9 +10,11 @@ import { SignupComponent } from '../signup/signup.component';
 })
 export class HomeComponent implements OnInit {
   subscriptionplan = "pearl";
+  userData;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.userData = JSON.parse(localStorage.getItem('userData'))
   }
 
   loginDialog() {

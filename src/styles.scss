@@ -527,6 +527,9 @@ dt {
 .font-500 {
   font-weight: 500;
 }
+.font-400 {
+  font-weight: 400;
+}
 
 .font-600 {
   font-weight: 600;
@@ -1032,7 +1035,7 @@ dt {
      color: #ffffff !important;
     background-color: #6f50a0;
     margin: 0px 17px;
-    padding: 16px 37px;
+    padding: 16px 34px;
 }
 
 #sidebar-menu .menu-title {
@@ -1267,14 +1270,14 @@ dt {
 @media (max-width: 768px) {
   .topbar .topbar-left {
     width: 70px !important;
-    height: 70px;
+        height: 55px;
   }
   .topbar .topbar-left .logo-light {
     display: none !important;
   }
   .topbar .topbar-left .logo-sm {
     display: block !important;
-    line-height: 70px !important;
+    line-height: 49px !important;
     font-size: 28px;
   }
   .navbar-custom {
@@ -4099,7 +4102,8 @@ label{
 }
 .login-title{
   color:#6f50a0;
-      font-size: 14px;
+     font-size: 18px;
+         font-weight: 200;
 }
 
 .bg-default{
@@ -4139,7 +4143,27 @@ label{
     }
     @media only screen and (max-device-width: 480px) {
        /* styles for mobile browsers smaller than 480px; (iPhone) */
-       
+        .imgalign{
+          width: 100%;
+      }
+      .mt-9 {
+         margin-top: 4rem !important;
+      }
+      .card-deck .card {
+          flex: 1 0 28%;
+      }
+      .packagealign{
+          padding-right: 3rem!important;
+      }
+      .side-menu{
+        display:none;
+      }
+       .hide{
+      display:block !important;
+    }
+    .side-menu{
+      top: 55px;
+    }
     }
     @media only screen and (device-width: 768px) {
        /* default iPad screens */
@@ -4174,12 +4198,26 @@ label{
       .pricingalign{
        width:50%;
       }
+       .packagealign{
+          padding-right: 3rem!important;
+      }
     }
     /* different techniques for iPad screening */
     @media only screen and (min-device-width: 481px) and 
-    (max-device-width: 1024px) and (orientation:portrait) {
+    (max-device-width: 767px)  {
       /* For portrait layouts only */
-      
+      .imgalign{
+          width: 100%;
+      }
+      .mt-9 {
+         margin-top: 4rem !important;
+      }
+      .card-deck .card {
+          flex: 1 0 28%;
+      }
+       .packagealign{
+          padding-right: 3rem!important;
+      }
     }
 
     @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and 
@@ -4187,5 +4225,6 @@ label{
       /* For landscape layouts only */
      
     }
+   
 
  //media end

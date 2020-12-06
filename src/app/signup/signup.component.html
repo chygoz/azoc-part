@@ -14,14 +14,17 @@
                   COZA GLOBAL PARTNER
                     <i class="fab fa-sass fa-2x text-cyan"></i>
                 </h5>
+                <a href="#"  [routerLink]="['/']" 
+                        class="btn btn-light btn-lg" role="button"
+                         aria-pressed="true">Go to Home</a>
             </div>
 		</div>
 	</div>
 	<div class="col-md-7 pl-5 pr-5 bg-white h-md-100 loginarea" style="overflow-y: scroll;">
 		<div class="align-items-center pl-5 pr-5 pt-4 justify-content-center">
 			<form [formGroup]="signForm" (ngSubmit)="onSubmit()">
-                <h4 class="mb-4 text-left pl-4 pt-4 pb-2 font-18">COZA PARTNER REGISTRATION FORM</h4>
-                <p class="font-14 pl-4 pb-4">Please fill form correctly with your details. Note that your <br />
+                <h4 class="mb-4 text-left pt-4 pb-2 font-24">COZA PARTNER REGISTRATION FORM</h4>
+                <p class="font-14 pb-4">Please fill form correctly with your details. Note that your <br />
                     information is treated with utmost confidentiality</p>
 				<div class="form-row">
                     <div class="form-group col-md-6">
@@ -52,8 +55,8 @@
 
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label pb-4 font-500 font-12 text-primary" for="exampleCheck1">
-                        I have read and agree with <span class="weight-bold">Terms & Conditions</span>
+                    <label class="form-check-label pb-4 font-400 font-12 text-primary" for="exampleCheck1">
+                        I have read and agree with <span class="font-500">Terms & Conditions</span>
                     </label>
                 </div>
                 <div class="text-danger text-center">

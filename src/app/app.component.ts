@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'azoc-part';
+  status: boolean = false;
+  clickEvent() {
+    console.log("sadfss");
+    this.status = !this.status;
+  }
 }

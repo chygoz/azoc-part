@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  status: boolean = false;
+  clickEvent() {
+    console.log("sadfss");
+    this.status = !this.status;
+  }
   ngOnInit(): void {
+
   }
 
 }
