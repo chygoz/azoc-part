@@ -9,6 +9,7 @@ import { PaymentHistoryComponent } from './payment-history/payment-history.compo
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SignupComponent } from './signup/signup.component';
+import { AuthGuardService } from './auth-guard.service';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
@@ -17,42 +18,42 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent }
     ],
-    //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'resources', component: LayoutComponent,
     children: [
       { path: '', component: ResourcesComponent }
     ],
-    //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'makepayment', component: LayoutComponent,
     children: [
       { path: '', component: MakepaymentComponent }
     ],
-    //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'payment-history', component: LayoutComponent,
     children: [
       { path: '', component: PaymentHistoryComponent }
     ],
-    //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'profile', component: LayoutComponent,
     children: [
       { path: '', component: ProfileComponent }
     ],
-    //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'settings', component: LayoutComponent,
     children: [
       { path: '', component: SettingsComponent }
     ],
-    //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
 ];
 
