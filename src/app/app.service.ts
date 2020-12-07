@@ -32,6 +32,14 @@ export class AppService {
     return this.http.post(`${api.api_url}getSubscriptions`, data, { headers });
   }
 
+  getMonthlyCommitment(data): Observable<any> {
+    let headers = new HttpHeaders();
+    headers = headers.append('Accept', 'application/json');
+    headers = headers.append('Content-Type', 'application/json');
+    headers = headers.append('token', localStorage.getItem('token'))
+    return this.http.post(`${api.api_url}getMonthlyCommitment`, data, { headers });
+  }
+
   registerSubscription(data): Observable<any> {
     let headers = new HttpHeaders();
     headers = headers.append('Accept', 'application/json');

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   userData;
-  constructor() { }
+  subscription;
+  constructor(private service: AppService) { }
 
   ngOnInit(): void {
     this.userData = JSON.parse(localStorage.getItem('userData'));
+    this.service.getMonthlyCommitment({}).subscribe((resp) => {
+      if(resp.status) {
+        this.subscription = resp.data;
+      }
+    })
   }
 
 }
