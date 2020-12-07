@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.userData = JSON.parse(localStorage.getItem('userData'))
+
   }
 
   loginDialog() {
