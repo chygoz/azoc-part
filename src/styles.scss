@@ -4131,6 +4131,11 @@ label{
 }
 
 
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #41246f;
+    border-color: #41246f;
+}
 
 
 //media start
@@ -4227,6 +4232,10 @@ label{
     }
     .mob-card{
       padding-bottom: 100px !important;
+    }
+
+    .header-dispaly-1 {
+    font-size: 9vw;
     }
    
 }
