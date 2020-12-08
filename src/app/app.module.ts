@@ -20,6 +20,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './auth-guard.service';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AuthGuardService } from './auth-guard.service';
     SidebarComponent,
     SignupComponent,
     LoginComponent,
+    SubscribeComponent,
   ],
   imports: [
     BrowserAnimationsModule,
