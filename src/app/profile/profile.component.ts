@@ -35,7 +35,13 @@ export class ProfileComponent implements OnInit {
   }
 
   onSubmit() {
-
+    this.service.updateUserdata(this.userForm.value).subscribe ((resp) => {
+      if(resp.status) {
+        console.log("updated sucessfully")
+      }else {
+        console.log("something went wrong")
+      }
+    })
   }
 
 }
