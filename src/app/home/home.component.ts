@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
 import { SignupComponent } from '../signup/signup.component';
+import { SubscribeComponent } from '../subscribe/subscribe.component';
 
 @Component({
   selector: 'app-home',
@@ -24,13 +25,15 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(() => {
     })
   }
-  registerDialog() {
-    let dialogRef = this.dialog.open(SignupComponent,
+
+  subscribeDialog() {
+    let dialogRef = this.dialog.open(SubscribeComponent,
       { panelClass: 'my-full-screen-dialog', width: '600px', });
 
     dialogRef.afterClosed().subscribe(() => {
     })
   }
+
 
   packageSelect(event, item) {
     this.subscriptionplan = item;

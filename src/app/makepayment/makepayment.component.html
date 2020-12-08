@@ -38,7 +38,8 @@
                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Amount</label>
-                                        <input type="number" class="form-control" id="inputEmail4" placeholder="0.00">
+                                     <input currencyMask formControlName="value" class="form-control" 
+                                      [options]="{ prefix: '' }"  />
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Email</label>

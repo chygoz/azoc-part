@@ -4489,5 +4489,18 @@ label{
     left: -32px !important;
 }
 
+span.fa {
+       position: absolute;
+    top: 70%;
+    right: 15px;
+    transform: translateY(-50%);
+   font-size: 18px;
+    color: #cbcbcb;
+}
+
+.form-group {
+    position: relative;
+}
+
 
 //media end

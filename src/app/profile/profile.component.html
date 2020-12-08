@@ -15,24 +15,24 @@
                     </div>
                 </div>
             </div>
-             <div class="row">
+            <div class="row">
                 <div class="col-xl-6 mb-5">
                     <div class="position-relative">
                         <div class="float-left mb-0 mr-3 ml-4 ">
                             <img src="assets/images/profile1.png" alt="" width="80"
-                             class="rounded-circle">
+                                 class="rounded-circle">
                         </div>
                         <div class="desc">
                             <h5 class="font-14 mb-1 pt-3"
-                             style="font-size:20px;color:#6f50a0">{{userData?.firstname}} {{userData?.lastname}}</h5>
+                                style="font-size:20px;color:#6f50a0">{{userData?.firstname}} {{userData?.lastname}}</h5>
                             <p class="text-muted" style="font-size:11px;">{{userData?.email}}</p>
                         </div>
                     </div>
                 </div>
-                 <div class="col-xl-6 pt-5">
-                       <button type="button" class="btn btn-primary mr-3 small" 
-                       style="background-color: #558a83;border: #558a83;">Change Password</button>
-                 </div>
+                <div class="col-xl-6 pt-5">
+                    <button type="button" class="btn btn-primary mr-3 small" 
+                            style="background-color: #558a83;border: #558a83;">Change Password</button>
+                </div>
             </div>
 
             <div class="row">
@@ -40,61 +40,68 @@
                     <div class="card">
                         <div class="card-body p-25">
                             <form class="font-opensans" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
+
+                           <div class="form-row">
+                                    <div class="form-group col-md-6 has-feedback">
                                         <label for="inputEmail4">First Name</label>
                                         <input type="text" class="form-control" 
-                                        id="inputEmail4" placeholder="" formControlName="firstname">
+                                               id="" placeholder="" formControlName="firstname">
+                                               <span class="fa fa-user-circle-o form-control-feedback"></span>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Last Name</label>
                                         <input type="text" class="form-control" 
-                                        id="inputEmail4" placeholder="" formControlName="lastname">
+                                               id="inputEmail4" placeholder="" formControlName="lastname">
+                                               <span class="fa fa-user-circle-o form-control-feedback"></span>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="inputEmail4">Address</label>
                                         <textarea class="form-control" 
-                                        id="inputEmail4" placeholder="" formControlName="address"></textarea>
+                                                  id="inputEmail4" placeholder="" formControlName="address"></textarea>
+                                                       <span class="fa fa-map-marker form-control-feedback"></span>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="inputEmail4">City</label>
                                         <input type="text" class="form-control" 
-                                        id="inputEmail4" placeholder="" formControlName="city">
+                                               id="inputEmail4" placeholder="" formControlName="city">
+                                                <span class="fa fa-map form-control-feedback"></span>
                                     </div>
                                 </div>
-                                 <div class="form-row">
+                                <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="inputEmail4">State</label>
                                         <input type="text" class="form-control" 
-                                        id="inputEmail4" placeholder="" formControlName="state">
+                                               id="inputEmail4" placeholder="" formControlName="state">
+                                                <span class="fa fa-map form-control-feedback"></span>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="inputEmail4">Postal Code</label>
                                         <input type="text" class="form-control" 
-                                        id="inputEmail4" placeholder="" formControlName="postal_code">
+                                               id="inputEmail4" placeholder="" formControlName="postal_code">
+                                                <span class="fa fa-envelope form-control-feedback"></span>
                                     </div>
                                 </div>
                                 <div class="form-row float-right">
-                                      <button type="submit" class="btn btn-primary mr-3 small" [disabled]="!userForm.valid">Save</button>
-                                        <button type="button" class="btn btn-light">Cancel</button>
+                                    <button type="submit" class="btn btn-primary mr-3 small" [disabled]="!userForm.valid">Save</button>
+                                    <button type="button" class="btn btn-light">Cancel</button>
                                 </div>
-                               
+
                             </form>
                         </div>
                     </div>      
                 </div>
-                
+
 
             </div>
 
-            
-            
+
+
         </div>
     </div>
 </div>
