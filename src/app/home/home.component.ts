@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AppService } from '../app.service';
 import { LoginComponent } from '../login/login.component';
 import { SignupComponent } from '../signup/signup.component';
 import { SubscribeComponent } from '../subscribe/subscribe.component';
@@ -10,12 +12,11 @@ import { SubscribeComponent } from '../subscribe/subscribe.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  subscriptionplan = "pearl";
+  subscriptionplan = "PEARL";
   userData;
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private service: AppService) { }
 
   ngOnInit(): void {
-
   }
 
   loginDialog() {
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit {
 
   subscribeDialog() {
     let dialogRef = this.dialog.open(SubscribeComponent,
-      { panelClass: 'my-full-screen-dialog', width: '600px', });
+      { panelClass: 'my-full-screen-dialog', width: '600px', data: {plan: this.subscriptionplan}});
 
     dialogRef.afterClosed().subscribe(() => {
     })

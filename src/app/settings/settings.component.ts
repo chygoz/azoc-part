@@ -29,7 +29,6 @@ export class SettingsComponent implements OnInit {
 
   getSubscriptions(){
     this.service.getSubscriptions({}).subscribe((resp) => {
-      console.log(resp);
       if(resp.status){
         this.subscriptionPlans = resp.data;
       }
