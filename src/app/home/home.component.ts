@@ -5,6 +5,7 @@ import { AppService } from '../app.service';
 import { LoginComponent } from '../login/login.component';
 import { SignupComponent } from '../signup/signup.component';
 import { SubscribeComponent } from '../subscribe/subscribe.component';
+import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,14 @@ export class HomeComponent implements OnInit {
 
   loginDialog() {
     let dialogRef = this.dialog.open(LoginComponent,
+      { panelClass: 'my-full-screen-dialog', width: '600px', });
+
+    dialogRef.afterClosed().subscribe(() => {
+    })
+  }
+
+  forgotpasswordDialog() {
+    let dialogRef = this.dialog.open(ForgotpasswordComponent,
       { panelClass: 'my-full-screen-dialog', width: '600px', });
 
     dialogRef.afterClosed().subscribe(() => {
