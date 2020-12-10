@@ -41,6 +41,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     SignupComponent,
     LoginComponent,
     SubscribeComponent,
+    ForgotpasswordComponent,
   ],
   imports: [
     BrowserAnimationsModule,
