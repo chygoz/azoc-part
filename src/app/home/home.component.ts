@@ -15,6 +15,7 @@ import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.compon
 export class HomeComponent implements OnInit {
   subscriptionplan = "PEARL";
   userData;
+  token = localStorage.getItem('token');
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private service: AppService) { }
 
   ngOnInit(): void {

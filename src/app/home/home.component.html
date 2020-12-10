@@ -11,13 +11,13 @@
             <div class="col-md-6">
                 <div class="container">
                     <div class="col-12 d-flex justify-content-end align-items-center pt-5">
-                        <button type="button" class="btn btn-primary mr-3 small"
+                        <button *ngIf="!token" type="button" class="btn btn-primary mr-3 small"
                          (click)="loginDialog()">Login</button>
-                        <a href="#"  [routerLink]="['/signup']" 
+                        <a *ngIf="!token" [routerLink]="['/signup']" 
                         class="btn btn-light btn-lg" role="button"
                          aria-pressed="true">Sign Up</a>
 
-                          <a href="#"  [routerLink]="['/dashboard']" 
+                          <a *ngIf="token" [routerLink]="['/dashboard']" 
                         class="btn button-platinum btn-lg" role="button"
                          aria-pressed="true">Go to Dashboard</a>
                     </div>
