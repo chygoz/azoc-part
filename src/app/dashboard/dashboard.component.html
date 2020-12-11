@@ -27,7 +27,8 @@
                                <div class="carousel-caption">
                                     <div class="col-md-12">
                                         <button type="button" class=" btn-primary btn-sm float-left">Partner ID</button> 
-                                        <button type="button" class="btn btn-link btn-sm float-right text-white font-italic">Click here to pay</button> 
+                                        <button type="button" class="btn btn-link btn-sm float-right text-white font-italic"
+                                        [routerLink]="['/makepayment']" >Click here to pay</button> 
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="col-xl-12" style="top: 9px;text-align: left;">
@@ -57,7 +58,7 @@
                              font-opensans opacity5 small">Seed Commitment</h6>
                             <h5 class="card-title text-white 
                             font-opensans opacity8 font-100 mt-0">Monthly Goal</h5>
-                            <h6 class="mt-5" style="color:#5de6a7;float:left;">NGN 0</h6>
+                            <h6 class="mt-5" style="color:#5de6a7;float:left;">{{subscription.currency}} 0</h6>
                             <h6 class="mt-5" style="color:#dedede;float:right;">{{subscription.currency}} {{subscription.monthly_commitment}}</h6>
                             <div class="clearfix"></div>
                             <div class="progress" style="height: 12px;">

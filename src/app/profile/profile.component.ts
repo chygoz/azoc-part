@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
-
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { UploadphotoComponent } from '../uploadphoto/uploadphoto.component';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -10,7 +11,7 @@ import { AppService } from '../app.service';
 export class ProfileComponent implements OnInit {
   userData;
   userForm: FormGroup;
-  constructor(private service: AppService, private formBuilder: FormBuilder) { }
+  constructor(public dialog: MatDialog, private service: AppService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     //this.userData = JSON.parse(localStorage.getItem('userData'))
@@ -25,20 +26,28 @@ export class ProfileComponent implements OnInit {
     this.getUserData();
   }
 
-  getUserData(){
+  getUserData() {
     this.service.getUserdata({}).subscribe((resp) => {
-      if(resp.status) {
+      if (resp.status) {
         this.userData = resp.data;
         this.userForm.patchValue(this.userData)
       }
     })
   }
 
+  uploadphotoDialog() {
+    let dialogRef = this.dialog.open(UploadphotoComponent,
+      { panelClass: 'my-full-screen-dialog', width: '600px', });
+
+    dialogRef.afterClosed().subscribe(() => {
+    })
+  }
+
   onSubmit() {
-    this.service.updateUserdata(this.userForm.value).subscribe ((resp) => {
-      if(resp.status) {
+    this.service.updateUserdata(this.userForm.value).subscribe((resp) => {
+      if (resp.status) {
         console.log("updated sucessfully")
-      }else {
+      } else {
         console.log("something went wrong")
       }
     })
