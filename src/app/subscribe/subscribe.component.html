@@ -26,7 +26,7 @@
             <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
               <div class="form-group">
                     <label for="email" class="font-500 font-12 text-primary">Choose Currency</label>
-                    <Select class="form-control" placeholder="Enter Email" [(ngModel)]="currency" (change)="currencyChange($event.target.value)" formControlName="currency_type">
+                    <Select class="form-control" name="currency" ngDefaultControl [(ngModel)]="defCurrency" (change)="currencyChange($event.target.value)" formControlName="currency">
                         <option value="NGN">Naira</option>
                         <option value="USD">Dollar</option>
                     </Select>

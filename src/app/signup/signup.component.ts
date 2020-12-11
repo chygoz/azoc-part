@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({
@@ -12,9 +12,11 @@ import { AppService } from '../app.service';
 export class SignupComponent implements OnInit {
   signForm: FormGroup;
   ErrText;
-  constructor(private formBuilder: FormBuilder, private service: AppService,private router: Router) { }
+  paramToken;
+  constructor(private formBuilder: FormBuilder, private service: AppService,private router: Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.paramToken = this.route.snapshot.paramMap.get('id');
     this.signForm = this.formBuilder.group({
       firstname: ['', [Validators.required]],
       lastname: ['', [Validators.required]],
@@ -36,6 +38,18 @@ export class SignupComponent implements OnInit {
       if(resp.status){
         localStorage.setItem('token', resp.token);
         localStorage.setItem('userData', JSON.stringify(resp.data));
+        let userSubsData = JSON.parse(localStorage.getItem(this.paramToken));
+        console.log(userSubsData);
+        if(userSubsData){
+          // subscribe plan 
+          userSubsData.email = this.signForm.get('email').value;
+          
+          this.service.registerSubscription(userSubsData).subscribe((resp1) => {
+            console.log(resp1);
+          })
+        }else {
+
+        }
         this.router.navigate(['/dashboard']);
       }else {
         this.ErrText = resp.msg;
