@@ -24,6 +24,8 @@ import { AuthGuardService } from './auth-guard.service';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { SubscribeplanComponent } from './subscribeplan/subscribeplan.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
     SubscribeComponent,
     ForgotpasswordComponent,
     UploadphotoComponent,
+    ChangepasswordComponent,
+    SubscribeplanComponent,
   ],
   imports: [
     BrowserAnimationsModule,

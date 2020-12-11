@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UploadphotoComponent } from '../uploadphoto/uploadphoto.component';
+import { ChangepasswordComponent } from '../changepassword/changepassword.component';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -37,6 +38,13 @@ export class ProfileComponent implements OnInit {
 
   uploadphotoDialog() {
     let dialogRef = this.dialog.open(UploadphotoComponent,
+      { panelClass: 'my-full-screen-dialog', width: '600px', });
+
+    dialogRef.afterClosed().subscribe(() => {
+    })
+  }
+  changepasswordDialog() {
+    let dialogRef = this.dialog.open(ChangepasswordComponent,
       { panelClass: 'my-full-screen-dialog', width: '600px', });
 
     dialogRef.afterClosed().subscribe(() => {

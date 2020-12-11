@@ -8,6 +8,7 @@ import { AppService } from '../app.service';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
+  userData;
   subscriptionPlans;
   selectedPlan = 'CLASSIC';
   amount;
@@ -16,10 +17,10 @@ export class SettingsComponent implements OnInit {
   subscribeForm: FormGroup
   constructor(private formBuilder: FormBuilder, private service: AppService) {
     this.getSubscriptions();
-   }
+  }
 
   ngOnInit(): void {
-    this.subscribeForm= this.formBuilder.group({
+    this.subscribeForm = this.formBuilder.group({
       monthly_commitment: ['', [Validators.required]],
       currency: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -27,9 +28,9 @@ export class SettingsComponent implements OnInit {
     })
   }
 
-  getSubscriptions(){
+  getSubscriptions() {
     this.service.getSubscriptions({}).subscribe((resp) => {
-      if(resp.status){
+      if (resp.status) {
         this.subscriptionPlans = resp.data;
       }
     })
@@ -37,30 +38,30 @@ export class SettingsComponent implements OnInit {
 
   validateSubscription() {
     let selectedCurrency = this.subscriptionPlans.filter(sp => sp.currency_type == this.currency);
-    for(let subs of selectedCurrency) {
-      if(subs.range_to != 'Above'){
-        if((Number(this.amount) >= Number(subs.range_from)) && (Number(this.amount) <= Number(subs.range_to))){
+    for (let subs of selectedCurrency) {
+      if (subs.range_to != 'Above') {
+        if ((Number(this.amount) >= Number(subs.range_from)) && (Number(this.amount) <= Number(subs.range_to))) {
           this.selectedPlan = subs.plan_name;
           this.subscribeForm.controls['subscription_id'].setValue(subs._id);
           break;
         }
-      }else {
-        if((Number(this.amount) >= Number(subs.range_from))){
+      } else {
+        if ((Number(this.amount) >= Number(subs.range_from))) {
           this.selectedPlan = subs.plan_name;
           this.subscribeForm.controls['subscription_id'].setValue(subs._id);
           break;
         }
       }
-      
+
     }
 
   }
 
-  onSubmit(){
-    console.log(this.subscribeForm.value);
+  onSubmit() {
+    this.userData = JSON.parse(localStorage.getItem('userData'));
     this.service.registerSubscription(this.subscribeForm.value).subscribe((resp) => {
-      console.log(resp);
-      if(resp.status){
+      console.log(this.userData);
+      if (resp.status) {
         this.subscribeForm.reset();
         this.currency = 'NGN';
         this.subscribeForm.controls['currency'].setValue('NGN');

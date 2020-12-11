@@ -33,7 +33,10 @@
                 </div>
                  <div class="form-group">
                     <label for="pwd" class="font-500 font-12 text-primary">Monthly Commitment</label>
-                    <input type="text" class="form-control" placeholder="Monthly Commitment" (input)="amountChange()" formControlName="monthly_commitment">
+                    <input type="text" class="form-control" [(ngModel)]="amount"
+                     currencyMask [options]="{ prefix: '' }" 
+                    placeholder="00.0" (input)="amountChange()"
+                     formControlName="monthly_commitment">
                 </div>
                 <div class="text-danger text-center">
                   
