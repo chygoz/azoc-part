@@ -23,10 +23,11 @@
             <h5 class="login-title mt-0 weight-bold pb-4 pt-5" style="font-weight:bold;">
             Subscribe to a Plan
             </h5>
-            <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+            <form >
               <div class="form-group">
                     <label for="email" class="font-500 font-12 text-primary">Select a Plan</label>
-                    <Select class="form-control" name="currency1" ngDefaultControl [(ngModel)]="defCurrency" (change)="currencyChange($event.target.value)" formControlName="currency">
+                    <Select class="form-control" name="currency" 
+                     formControlName="currency">
                         <option value="">Select</option>
                         <option value="5fca61a79ad8745249c5b03d">MONTHLY:NGN 34999</option>
                         <option value="5fca620c9ad8745249c5b03f">MONTHLY:NGN 174999</option>
@@ -42,7 +43,7 @@
                 <div class="text-danger text-center">
                   
                 </div>
-                <button type="submit" [disabled]="!subscribeForm.valid && disableSubmit" class="btn btn-primary loginbtn btn-block mt-2">Continue</button>
+                <button type="submit"  class="btn btn-primary loginbtn btn-block mt-2">Continue</button>
                 
              
             </form>
