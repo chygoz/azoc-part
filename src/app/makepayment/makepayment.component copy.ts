@@ -16,7 +16,7 @@ export class MakepaymentComponent implements OnInit {
     { value: 'NGN', label: 'Nigerian Naira' },
     { value: 'USD', label: 'Dollar' }
   ]
-  subscribeForm: FormGroup
+  subscribeForm: FormGroup;
   selectedCurrency: any = [];
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private service: AppService) { }
 
@@ -45,6 +45,5 @@ export class MakepaymentComponent implements OnInit {
       }
     })
   }
-  onSubmit() { }
 
 }

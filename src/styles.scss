@@ -4517,6 +4517,19 @@ span.fa {
 a.text-primary:focus, a.text-primary:hover{
         color: #4B2A80!important;
 }
+.btn-danger:focus, .btn-danger:hover{
+        color: #771d1d !important;
+            background-color: #fbd5d5 !important;
+    border: none !important;
+}
+
+.example-month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+  display: none;
+}
 
 
 //media end

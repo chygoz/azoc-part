@@ -1,1 +1,54 @@
-<p>subscribeplan works!</p>
+<form >
+    <div class="row">
+        <div class="col-md-5 bg-primary hideleftpan">
+           <div class="d-md-flex
+         align-items-center h-100 p-4 text-center justify-content-center">
+			<div class="logoarea pt-5 pb-5">
+				 
+				<h1 class="mb-0 mt-3 display-4"> 
+                    <img src="./assets/images/logo.png"
+                     class="img-fluid" width="100" />
+                    </h1>
+				<h6 class="mt-5  text-white font-16 weight-100 opacity8 ">
+                  COZA GLOBAL PARTNER
+                    <i class="fab fa-sass fa-2x text-cyan"></i>
+                </h6>
+            </div>
+		</div>
+        </div>
+        <div class="col-md-7 bg-light">
+            <div class="
+         align-items-center h-100 pl-5 pr-5 pb-5 justify-content-center ">
+         
+            <h5 class="login-title mt-0 weight-bold pb-4 pt-5" style="font-weight:bold;">
+            Subscribe to a Plan
+            </h5>
+            <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                    <label for="email" class="font-500 font-12 text-primary">Select a Plan</label>
+                    <Select class="form-control" name="currency1" ngDefaultControl [(ngModel)]="defCurrency" (change)="currencyChange($event.target.value)" formControlName="currency">
+                        <option value="">Select</option>
+                        <option value="5fca61a79ad8745249c5b03d">MONTHLY:NGN 34999</option>
+                        <option value="5fca620c9ad8745249c5b03f">MONTHLY:NGN 174999</option>
+                        <option value="5fca62c79ad8745249c5b041">MONTHLY:NGN 349999</option>
+                        <option value="5fca632e9ad8745249c5b043">MONTHLY:UnLimited</option>
+                        <option value="5fca60a39ad8745249c5b03c">MONTHLY:USD 99</option>
+                        <option value="5fca61a79ad8745249c5b03d">MONTHLY:USD 499</option>
+                        <option value="5fca61a79ad8745249c5b03d">MONTHLY:USD 999</option>
+                        <option value="5fca632e9ad8745249c5b043">MONTHLY:UnLimited</option>
+                    </Select>
+                </div>
+                 
+                <div class="text-danger text-center">
+                  
+                </div>
+                <button type="submit" [disabled]="!subscribeForm.valid && disableSubmit" class="btn btn-primary loginbtn btn-block mt-2">Continue</button>
+                
+             
+            </form>
+        </div>
+        </div>
+
+    </div>
+</form>
+

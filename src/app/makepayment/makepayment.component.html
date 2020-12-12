@@ -18,7 +18,7 @@
                 <div class="col-xl-6">
                     <div class="card">
                         <div class="card-body p-25">
-                            <form class="font-opensans">
+                            <form  [formGroup]="subscribeForm" (ngSubmit)="onSubmit()" class="font-opensans">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Select Month</label>
@@ -38,10 +38,9 @@
                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Amount</label>
-                                     <input currencyMask formControlName="value" 
-                                     [(ngModel)]="amount"
-                                     placeholder="00.0" class="form-control" 
-                                      [options]="{ prefix: '' }"  />
+                                   <input class="form-control" [(ngModel)]="amount"
+                                                  currencyMask [options]="{ prefix: '' }" 
+                                                id="inputEmail4" placeholder="0.00" formControlName="monthly_commitment">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Email</label>
