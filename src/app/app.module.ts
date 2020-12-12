@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -53,6 +54,7 @@ import { SubscribeplanComponent } from './subscribeplan/subscribeplan.component'
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
