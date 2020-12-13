@@ -23,7 +23,7 @@ export class MakepaymentComponent implements OnInit {
   subscribeForm: FormGroup
   selectedCurrency: any = [];
   date;
-  today = new Date();
+  startMonth = new Date();
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private service: AppService) { }
 
 
@@ -36,6 +36,8 @@ export class MakepaymentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    let curDate = new Date();
+    this.startMonth = new Date(curDate.setMonth(curDate.getMonth()-4))
     this.subscribeForm = this.formBuilder.group({
       date: [_moment(), [Validators.required]],
       monthly_commitment: ['', [Validators.required]],
@@ -44,6 +46,7 @@ export class MakepaymentComponent implements OnInit {
       subscription_id: ['']
     })
     this.userData = JSON.parse(localStorage.getItem('userData'));
+    this.subscribeForm.controls['email'].setValue(this.userData.email)
     this.service.getMonthlyCommitment({}).subscribe((resp) => {
       if (resp.status) {
         this.subscription = resp.data;
