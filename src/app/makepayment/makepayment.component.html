@@ -22,8 +22,8 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Select Month</label>
-                                        <input type="text" class="form-control" id="inputEmail4" placeholder="Dec,2020"
-                                        [matDatepicker]="dp" formControlName="date" (click)="dp.open()">
+                                        <input type="text" class="form-control" id="inputEmail4" placeholder="Select Month"
+                                        [matDatepicker]="dp" formControlName="date" [min]="today" (click)="dp.open()">
                                         <mat-datepicker #dp startView="multi-year"
                                         (yearSelected)="chosenYearHandler($event)"
                                         (monthSelected)="chosenMonthHandler($event, dp)"></mat-datepicker>

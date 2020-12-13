@@ -23,6 +23,7 @@ export class MakepaymentComponent implements OnInit {
   subscribeForm: FormGroup
   selectedCurrency: any = [];
   date;
+  today = new Date();
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private service: AppService) { }
 
 
