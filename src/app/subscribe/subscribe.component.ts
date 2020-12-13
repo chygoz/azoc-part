@@ -13,14 +13,14 @@ export class SubscribeComponent implements OnInit {
 
   subscriptionPlans;
   subscribeForm: FormGroup;
-  currency = 'NGN';
   amount;
-  defCurrency;
+  defCurrency = 'NGN';
   disableSubmit: boolean = true;
   constructor(private formBuilder: FormBuilder, private service: AppService, private router: Router,
     public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
+    this.getSubscriptions();
     this.subscribeForm = this.formBuilder.group({
       subscription_id: ['', [Validators.required, Validators.email]],
       currency: ['', [Validators.required]],
@@ -34,12 +34,10 @@ export class SubscribeComponent implements OnInit {
       if (resp.status) {
         this.subscriptionPlans = resp.data;
       }
-      console.log(this.subscriptionPlans)
     })
   }
 
   currencyChange(event) {
-    console.log(event);
     this.defCurrency = event;
     this.amountChangeFunction();
   }
@@ -48,9 +46,9 @@ export class SubscribeComponent implements OnInit {
     this.amountChangeFunction();
   }
   amountChangeFunction() {
-    let selectedplan = this.subscriptionPlans.filter(sp => (sp.plan_name == this.data.plan) && (sp.currency_type == this.currency));
+    let selectedplan = this.subscriptionPlans.filter(sp => (sp.plan_name == this.data.plan) && (sp.currency_type == this.defCurrency));
     this.subscribeForm.controls['subscription_id'].setValue(selectedplan[0]._id);
-    this.subscribeForm.controls['currency_type'].setValue(selectedplan[0].currency_type);
+    this.subscribeForm.controls['currency'].setValue(selectedplan[0].currency_type);
     if ((this.subscribeForm.get('monthly_commitment').value > Number(selectedplan[0].range_from)) &&
       (this.subscribeForm.get('monthly_commitment').value < Number(selectedplan[0].range_to))) {
       this.disableSubmit = false;
