@@ -27,7 +27,22 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { SubscribeplanComponent } from './subscribeplan/subscribeplan.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import {MomentDateAdapter} from '@angular/material-moment-adapter';
 
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'MM/YYYY',
+  },
+  display: {
+    dateInput: 'MM/YYYY',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,11 +73,14 @@ import { SubscribeplanComponent } from './subscribeplan/subscribeplan.component'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxCurrencyModule
+    NgxCurrencyModule,
+    MatDatepickerModule
   ],
-  exports: [MatDialogModule],
+  exports: [MatDialogModule, MatDatepickerModule, MatNativeDateModule, MatRippleModule],
   entryComponents: [LoginComponent, SignupComponent],
-  providers: [AuthGuardService],
+  providers: [AuthGuardService,
+    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
+    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
