@@ -67,9 +67,8 @@
                                         <div class="form-group col-md-3">
                                             <label for="inputEmail4">Monthly Commitment</label>
                                               
-                                   
-                                            <input class="form-control" [(ngModel)]="amount"
-                                                 (input)="validateSubscription()" currencyMask [options]="{ prefix: '' }" 
+                                            <input type="number" class="form-control" [(ngModel)]="amount"
+                                                 (input)="validateSubscription()"
                                                 id="inputEmail4" placeholder="0.00" formControlName="monthly_commitment">
                                         </div>
                                         <div class="form-group col-md-3">
