@@ -8,13 +8,13 @@ import { AppService } from '../app.service';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-  userData;
   subscriptionPlans;
   selectedPlan = 'CLASSIC';
   amount;
   currency = 'NGN';
   email;
-  subscribeForm: FormGroup
+  subscribeForm: FormGroup;
+  userData = JSON.parse(localStorage.getItem('userData'));
   constructor(private formBuilder: FormBuilder, private service: AppService) {
     this.getSubscriptions();
   }
@@ -26,6 +26,8 @@ export class SettingsComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       subscription_id: ['']
     })
+
+    this.email = this.userData.email;
   }
 
   getSubscriptions() {
