@@ -7,6 +7,7 @@ import {MatDatepicker} from '@angular/material/datepicker';
 
 import * as _moment from 'moment';
 import {Moment} from 'moment';
+
 @Component({
   selector: 'app-makepayment',
   templateUrl: './makepayment.component.html',
@@ -15,7 +16,7 @@ import {Moment} from 'moment';
 export class MakepaymentComponent implements OnInit {
   userData;
   subscription;
-  amount;
+  amount: number = 100;
   currency = [
     { value: 'NGN', label: 'Nigerian Naira' },
     { value: 'USD', label: 'Dollar' }
@@ -24,6 +25,8 @@ export class MakepaymentComponent implements OnInit {
   selectedCurrency: any = [];
   date;
   startMonth = new Date();
+  title: string;
+  reference: string;
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private service: AppService) { }
 
 
@@ -54,6 +57,7 @@ export class MakepaymentComponent implements OnInit {
         console.log(this.selectedCurrency);
       }
     })
+    this.reference = `ref-${Math.ceil(Math.random() * 10e13)}`;
   }
   onSubmit() { }
 
@@ -73,4 +77,56 @@ export class MakepaymentComponent implements OnInit {
     datepicker.close();
   }
 
+  // for paystack start
+  paymentInit() {
+  }
+
+  paymentDone(ref: paymentResponse) {
+    this.title = 'Payment successful';
+    let paymentObject = <paymentObject>{
+      payment:{
+        status: ref.status,
+        transactionID: ref.transaction,
+        reference: this.reference,
+        transactionType: null,
+        type: 'paystack',
+      },
+      referenceId: this.reference,
+      amount: this.amount
+    }
+    this.service.savePaymentTransaction(paymentObject).subscribe( (data) => {
+      if(data.status){
+        this.service.showSuccess(data.msg)
+      }else {
+        this.service.showError(data.msg);
+      }
+      
+    })
+
+  }
+
+  paymentCancel() {
+    //this.showToast(false, 'Payment Failed!', 'Success!');
+  }
+  // for pay stack end
+}
+
+interface paymentResponse {
+  message: string;
+  reference: string;
+  status: string;
+  trans: string;
+  transaction: string;
+  trxref: string;
+}
+export interface paymentObject {
+  payment: payment;
+  amount: string | number;
+}
+
+interface payment {
+  "status": string;
+  "transactionID": string;
+  "transactionType": string;
+  "type": string;
 }

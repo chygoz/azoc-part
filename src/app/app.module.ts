@@ -31,6 +31,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
+import { Angular4PaystackModule } from 'angular4-paystack';
+
 
 export const MY_FORMATS = {
   parse: {
@@ -74,7 +76,8 @@ export const MY_FORMATS = {
     FormsModule,
     ReactiveFormsModule,
     NgxCurrencyModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    Angular4PaystackModule.forRoot('pk_test_57ca29691dbdf5c111814020111bbbd7c04befa7'),
   ],
   exports: [MatDialogModule, MatDatepickerModule, MatNativeDateModule, MatRippleModule],
   entryComponents: [LoginComponent, SignupComponent],
