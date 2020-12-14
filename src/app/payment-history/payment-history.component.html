@@ -34,20 +34,28 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>SBI12365478</td>
-                                    <td>Nov 09, 2020</td>
-                                    <td>$2000.00</td>
+                                <tr *ngFor="let trans of transactions">
+                                    <td>{{trans?.referenceId}}</td>
+                                    <td>{{trans?.created_at | date: 'MMM MM, yyyy'}}</td>
+                                    <td>{{trans?.amount}}</td>
                                     <td>
-                                        <button type="button" class="btn btn-green 
+                                        <button *ngIf="trans?.payment.status == 'success'" type="button" class="btn btn-green 
                                                 btn-sm btn-rounded" 
                                                 style="padding: 1px 13px;color: #014737;
                                                 font-weight: bold;">
                                                 <i class="fa fa-circle" style="color:#0d9f6e;"></i>
                                             &nbsp;&nbsp;&nbsp;COMPLETED
-                                        </button></td>
+                                        </button>
+                                        <button *ngIf="trans?.payment.status != 'success'" type="button" class="btn btn-danger 
+                                                btn-sm btn-rounded" 
+                                                style="padding: 1px 13px;color: #771d1d;
+                                                font-weight: bold;">
+                                                <i class="fa fa-circle" style="color:#f05252;"></i>
+                                            &nbsp;&nbsp;&nbsp;PENDING
+                                        </button>
+                                    </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>SBI12365478</td>
                                     <td>Nov 09, 2020</td>
                                     <td>$2000.00</td>
@@ -61,8 +69,8 @@
                                             &nbsp;&nbsp;&nbsp;PENDING
                                         </button>
                                     </td>
-                                </tr>
-                                  <tr>
+                                </tr> -->
+                                  <!-- <tr>
                                     <td>SBI12365478</td>
                                     <td>Nov 09, 2020</td>
                                     <td>$2000.00</td>
@@ -74,7 +82,7 @@
                                                 <i class="fa fa-circle" style="color:#0d9f6e;"></i>
                                             &nbsp;&nbsp;&nbsp;COMPLETED
                                         </button></td>
-                                </tr>
+                                </tr> -->
                             </tbody>
 
 
