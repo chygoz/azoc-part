@@ -73,6 +73,13 @@ export class AppService {
     return this.http.post(`${api.api_url}changePassword`, data, { headers });
   }
 
+  forgotPassword(data): Observable<any> {
+    let headers = new HttpHeaders();
+    headers = headers.append('Accept', 'application/json');
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(`${api.api_url}forgotPassword`, data, { headers });
+  }
+
   savePaymentTransaction(data): Observable<any> {
     let headers = new HttpHeaders();
     headers = headers.append('Accept', 'application/json');
