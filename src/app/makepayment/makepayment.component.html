@@ -53,7 +53,7 @@
                                 
                                 <!-- <button type="button" class="btn btn-info btn-lg btn-block">Make Payment</button> -->
                                 <angular4-paystack [email]="userData.email" [currency]="selectedCurrency[0]?.value" [amount]="amount * 100" [ref]="reference"
-                                    [channels]="['bank','card']" [class]="'btn btn-info btn-lg btn-block'" (close)="paymentCancel()"
+                                    [channels]="['bank','card']" [class]="'btn btn-info btn-lg btn-block mb-2'" (close)="paymentCancel()"
                                     (callback)="paymentDone($event)">
                                     Make Payment
                                 </angular4-paystack>
