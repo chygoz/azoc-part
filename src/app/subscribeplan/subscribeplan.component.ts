@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-subscribeplan',
   templateUrl: './subscribeplan.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscribeplanComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<SubscribeplanComponent>) { }
 
   ngOnInit(): void {
+  }
+  closeDialog() {
+    this.dialog.closeAll();
   }
 
 }

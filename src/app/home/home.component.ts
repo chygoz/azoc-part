@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
   subscriptionplan = "PEARL";
   userData;
   token = localStorage.getItem('token');
-  constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private service: AppService) { }
+  constructor(public dialog: MatDialog,
+
+    private formBuilder: FormBuilder, private service: AppService) { }
 
   ngOnInit(): void {
   }
@@ -39,7 +41,7 @@ export class HomeComponent implements OnInit {
 
   subscribeDialog() {
     let dialogRef = this.dialog.open(SubscribeComponent,
-      { panelClass: 'my-full-screen-dialog', width: '600px', data: {plan: this.subscriptionplan}});
+      { panelClass: 'my-full-screen-dialog', width: '600px', data: { plan: this.subscriptionplan } });
 
     dialogRef.afterClosed().subscribe(() => {
     })

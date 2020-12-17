@@ -19,27 +19,31 @@ export class ChangepasswordComponent implements OnInit {
       old_password: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required, Validators.minLength(3)]],
       confirm_password: ['', [Validators.required, Validators.minLength(3)]]
-    }, {validator: this.passwordConfirming})
+    }, { validator: this.passwordConfirming })
   }
 
   passwordConfirming(c: AbstractControl): { invalid: boolean } {
     if (c.get('password').value !== c.get('confirm_password').value) {
-        return {invalid: true};
+      return { invalid: true };
     }
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.passwordForm.value);
     //this.service.
 
     this.service.changePassword(this.passwordForm.value).subscribe((resp) => {
-      if(resp.status){
+      if (resp.status) {
         this.service.showSuccess(resp.msg);
         this.dialogRef.close();
-      }else {
+      } else {
         this.service.showError(resp.msg);
       }
     })
-    
+
   }
+  closeDialog() {
+    this.dialog.closeAll();
+  }
+
 }

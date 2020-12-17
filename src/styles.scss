@@ -4533,5 +4533,11 @@ a.text-primary:focus, a.text-primary:hover{
   display: none;
 }
 
+.closebutton{
+    position: relative;
+    z-index: 9999;
+    float: right;
+}
+
 
 //media end

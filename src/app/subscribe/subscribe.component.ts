@@ -77,6 +77,12 @@ export class SubscribeComponent implements OnInit {
     }
   }
 
+  closeDialog() {
+
+
+    this.dialog.closeAll();
+  }
+
 
 
 }

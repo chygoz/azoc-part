@@ -44,5 +44,8 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 
 }

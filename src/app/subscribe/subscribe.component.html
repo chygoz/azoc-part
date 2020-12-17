@@ -1,5 +1,10 @@
+
+
+
 <form >
+    
     <div class="row">
+        
         <div class="col-md-5 bg-primary hideleftpan">
            <div class="d-md-flex
          align-items-center h-100 p-4 text-center justify-content-center">
@@ -17,9 +22,15 @@
 		</div>
         </div>
         <div class="col-md-7 bg-light">
-            <div class="
-         align-items-center h-100 pl-5 pr-5 pb-5 justify-content-center ">
+
+            <div (click)="closeDialog()" class="closebutton">
+                <img src="./assets/images/cancel.svg"
+                     class="img-fluid m-3" width="18" />
+            </div>
+            
+            <div class="align-items-center h-100 pl-5 pr-5 pb-5 justify-content-center ">
          
+          
             <h5 class="login-title mt-0 weight-bold pb-4 pt-5" style="font-weight:bold;">
             Subscribe Package
             </h5>
